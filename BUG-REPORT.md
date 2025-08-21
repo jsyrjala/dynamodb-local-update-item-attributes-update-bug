@@ -4,6 +4,8 @@
 
 DynamoDB Local version 3.0.0 does not properly default to PUT action when using `UpdateItem` with `attributeUpdates` parameter and no explicit action is specified. This behavior differs from the real AWS DynamoDB service, which correctly defaults to PUT action when the action parameter is omitted.
 
+**DynamoDB Local Documentation**: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
+
 ## Environment
 
 - **DynamoDB Local Version**: 3.0.0
