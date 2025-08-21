@@ -86,7 +86,7 @@ This bug affects applications that:
 
 ## Reproduction Steps
 
-1. Clone this repository
+1. Clone the reproduction repository: https://github.com/jsyrjala/dynamodb-local-update-item-attributes-update-bug
 2. Run `./gradlew test`
 3. Observe that `testUpdateItemWithAttributeUpdates()` fails
 4. Observe that `testUpdateItemWithUpdateExpression()` and `testUpdateItemWithAttributeUpdatesExplicitPutAction()` pass
