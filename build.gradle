@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // AWS SDK for Java V2
+    implementation platform('software.amazon.awssdk:bom:2.21.29')
+    implementation 'software.amazon.awssdk:dynamodb'
+    
+    // DynamoDB Local
+    implementation 'software.amazon.dynamodb:DynamoDBLocal:3.0.0'
+    
+    // SLF4J implementation
+    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
+    
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
